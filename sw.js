@@ -10,4 +10,8 @@ self.addEventListener('fetch', evento => {
         `, {headers: {'Content-Type': 'text/css'}});
         evento.respondWith(respuesta);
     }
+
+    if (evento.request.url.includes('.jpg')) {
+        evento.respondWith( fetch('img/main-patas-arriba.jpg'));
+    }
 });
