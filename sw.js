@@ -1,1 +1,4 @@
-console.log('SW: hola mundo');
+
+self.addEventListener('fetch', evento => {
+    console.log(evento);
+});
